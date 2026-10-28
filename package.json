@@ -1,0 +1,57 @@
+{
+  "name": "ai-chat-share-export",
+  "version": "0.1.0",
+  "description": "Convert a public AI chat share link to Markdown or JSON",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "ai-chat-share-export": "./dist/cli.js"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": "github:xiaobin7060/ai-chat-share-export",
+  "homepage": "https://todoc.ai/chatgpt-link-to-pdf",
+  "keywords": [
+    "chatgpt",
+    "chatgpt-share",
+    "share-link",
+    "export",
+    "markdown",
+    "claude",
+    "gemini",
+    "ai-chat",
+    "conversation-export"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "18.19.130",
+    "tsup": "8.5.1",
+    "typescript": "5.9.3",
+    "vitest": "3.2.4"
+  },
+  "author": "TODOC (https://todoc.ai)",
+  "bugs": "https://github.com/xiaobin7060/ai-chat-share-export/issues"
+}
